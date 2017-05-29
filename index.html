@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <title>Bictacora Mone</title>
+    <link rel="stylesheet" href="assets/css/materialize.min.css">
+
+</head>
+
+<body>
+    <header class="container center">
+        <h1>Flash Bitacora Mone</h1>
+        <p>"Publish anything", just in you browser.</p>
+    </header>
+
+    <section class="container" id="areaMostrar">
+    </section>
+    <!-------Inicio botones------>
+    <div class="fixed-action-btn horizontal click-to-toggle">
+        <a class="btn-floating btn-large red">
+            <i class="material-icons">mode_edit</i>
+        </a>
+        <ul>
+            <li><a class="btn-floating cyan" href="#modalChat"><i class="material-icons">chat</i></a></li>
+            <li><a class="btn-floating blue" href="#modalImagen"><i class="material-icons">perm_media</i></a></li>
+            <li><a class="btn-floating green" href="#modalEvento"><i class="material-icons">today</i></a></li>
+            <li><a class="btn-floating yellow" href="#modalAudioVideo"><i class="material-icons">video_library</i></a></li>
+        </ul>
+    </div>
+    <!-------Fin botones------>
+
+    <!-------Inicio modalChat------>
+    <div id="modalChat" class="modal">
+        <div class="modal-content row">
+            <div class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="modal-chat-title" type="text" class="validate" data-length="10" />
+                        <label for="title">Título</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <textarea id="modal-chat-message" class="materialize-textarea"></textarea>
+                        <label for="message">Mensaje</label>
+                    </div>
+                    <button class="btn waves-effect waves-light right cyan accent-4" type="submit" name="action" data-publication="text">Publicar
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-------Fin modalChat------>
+
+    <!-------Inicio modalImagen------>
+    <div id="modalImagen" class="modal">
+        <div class="modal-content row">
+            <div class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="modal-imagen-title" type="text" class="validate" data-length="10" />
+                        <label for="title">Título</label>
+                    </div>
+                    <div class="file-field input-field col s12">
+                        <div class="btn">
+                            <span>Imagen</span>
+                            <input type="file" id="imagen-file">
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input class="file-path validate" type="text">
+                        </div>
+                    </div>
+                    <button class="btn waves-effect waves-light right blue accent-2" type="submit" name="action" data-publication="image">Publicar
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-------Fin modalImagen------>
+    
+    
+    <!-------Inicio modalEvento------>   
+    
+    <div id="modalEvento" class="modal">
+        <div class="modal-content row">
+            <div class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="text" class="validate" data-length="10" id="modal-evento-titulo" />
+                        <label for="title">Título</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input type="date" class="datepicker" id="modal-fecha-evento" placeholder="Fecha del evento">
+                    </div>
+                    <button class="btn waves-effect waves-light right green" type="submit" name="action" data-publication="event">Publicar
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-------Fin modalEvento------>   
+    
+        <!-------Inicio modalAudioVideo------>
+    <div id="modalAudioVideo" class="modal">
+        <div class="modal-content row">
+            <div class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="modal-audioVideo-title" type="text" class="validate" data-length="10" />
+                        <label for="title">Título</label>
+                    </div>
+                    <div class="file-field input-field col s12">
+                        <div class="btn">
+                            <span>Video o Audio</span>
+                            <input type="file"  id="audioVideo-file">
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input class="file-path validate" type="text">
+                        </div>
+                    </div>
+                    <button class="btn waves-effect waves-light right yellow" type="submit" name="action" data-publication="audioVideo">Publicar
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-------Fin modalAudioVideo----->
+
+
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="assets/js/materialize.min.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC69P5c-_kfsP9KcwVXI6myL2Ms5NGdpL0"></script>
+    <script type="text/javascript" src="assets/js/app.js"></script>
+
+</body>
+
+</html>
